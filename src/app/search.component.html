@@ -1,0 +1,12 @@
+<h1 class="text-center">Search movies</h1>
+<br>
+<search-form (sendQuery)="submit($event)" (cleanResults)="clean()" ></search-form>
+<br>
+  <div *ngIf="results">
+    <div *ngIf="results.Error" class="text-danger error">
+      No movies were found with the term: {{ query }} !
+  </div>
+    <div *ngIf="!results.Error" class="results">
+        <results-list [results]="results"></results-list>
+    </div>
+  </div>

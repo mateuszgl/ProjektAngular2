@@ -1,0 +1,12 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="form-inline">
+    <div class="form-group">
+      <div class="col-xs-3">
+        <input formControlName="query" type="text" placeholder="Movie Title" class="form-control">
+      </div>
+     <button type="submit" [disabled]="!form.valid" class="btn btn-primary searchButton">Search</button>
+    </div>
+</form>
+<div *ngIf="form.controls['query'].hasError('invalidQuery')" class="text-danger error">
+  <br>
+      We don't like CATS!!
+</div>

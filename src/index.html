@@ -1,0 +1,20 @@
+<html>
+   
+   <head>
+       <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css"/>
+       <link rel="stylesheet" href="css/styles.css"/>
+    </head>
+    <body>
+    <router-app><img src="../css/loading.gif" class="loading"></router-app>
+        <script src="components/core-js/client/shim.min.js"></script>
+        <script src="components/zone.js/dist/zone.js"></script>
+        <script src="components/reflect-metadata/Reflect.js"></script>
+        <script type="application/javascript" src="components/systemjs/dist/system.src.js"></script>
+        <script type="application/javascript" src="systemjs.config.js"></script>
+        <script type="application/javascript">
+            
+      System.import('app').catch(function(err){ console.error(err);  });
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+ <div *ngIf="movie">
+    <h1>{{ movie.Title }}</h1>
+
+    <p class="left">
+      <img src="{{ movie.Poster }}">
+    </p>
+<ngb-accordion [closeOthers]="true" activeIds="1" class="right">
+  <ngb-panel id="1" title="Simple Info">
+    <template ngbPanelContent>
+     Year: {{ movie.Year }} <br>
+     Age Rating: {{ movie.Rated }} <br>
+     Released: {{ movie.Released }} <br>
+     Runtime: {{ movie.Runtime }} <br>
+     Genre: {{ movie.Genre }} <br>
+     imdb Rating: {{ movie.imdbRating }} <br>
+    </template>
+  </ngb-panel>
+  <ngb-panel id="2" title="Cast">
+    <template ngbPanelContent>
+     Director: {{ movie.Director }} <br>
+     Writer: {{ movie.Writer }} <br>
+     Actors: {{ movie.Actors }} <br>
+    </template>
+  </ngb-panel>
+  <ngb-panel id="3" title="Plot">
+    <template ngbPanelContent>
+     {{ movie.Plot }} <br>
+    </template>
+  </ngb-panel>
+    <ngb-panel id="4" title="Other Info">
+    <template ngbPanelContent>
+     Language: {{ movie.Language }} <br>
+     Country: {{ movie.Country }} <br>
+     Awards: {{ movie.Awards }} <br>
+     Type: {{ movie.Type }} <br>
+    </template>
+  </ngb-panel>
+</ngb-accordion>
+<button class="btn btn-primary backButton" (click)="back()">Back</button>
+</div>
+
